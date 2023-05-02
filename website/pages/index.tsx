@@ -7,7 +7,6 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import AppBar from '../components/AppBar';
-import UniswapWidget from '../components/UniswapWidget';
 
 export default function Album() {
   return (
@@ -41,7 +40,7 @@ export default function Album() {
               spacing={2}
               justifyContent="center"
             >
-              <IconButton size="large" href="/mint">
+              <IconButton size="large" target="_blank" href="https://twitter.com/ChadTokenOrg">
                 <TwitterIcon fontSize="large" />
               </IconButton>
             </Stack>
