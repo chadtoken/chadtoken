@@ -14,10 +14,10 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
 const pages = [
-  { name: "Buy", variant: 'text', href: "#roadmap" },
-  { name: "About", variant: 'text', href: "#about" },
-  { name: "Tokenomics", variant: 'text', href: "#tokenomics" },
-  { name: "Roadmap", variant: 'text', href: "#roadmap" },
+  { name: "Buy", href: "#roadmap" },
+  { name: "About", href: "#about" },
+  { name: "Tokenomics", href: "#tokenomics" },
+  { name: "Roadmap", href: "#roadmap" },
 ];
 const settings = ['Buy now', 'Twitter'];
 
@@ -115,7 +115,6 @@ function ResponsiveAppBar() {
               <Button
                 key={page.name}
                 href={page.href}
-                variant={page.variant}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2 }}
               >
