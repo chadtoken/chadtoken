@@ -8,6 +8,8 @@ import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import TextField from '@mui/material/TextField';
+import InputAdornment from '@mui/material/InputAdornment';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import AppBar from '../components/AppBar';
 import Footer from '../components/Footer';
 
@@ -41,19 +43,45 @@ export default function Album() {
               alignItems="center"
               justifyContent="center">
               <Box sx={{ width: { xs: '100%', md: 555 } }}>
-                <ButtonGroup fullWidth variant="contained" aria-label="outlined primary button group">
+                <ButtonGroup disableElevation disableFocusRipple disableRipple fullWidth variant="contained" aria-label="outlined primary button group">
                   <Button size="large">Deposit</Button>
                   <Button size="large">Withdraw</Button>
                 </ButtonGroup>
                 <Typography variant="h6" sx={{ mt: 2 }}>
                   Amount to stake
                 </Typography>
+                <TextField
+                  size="small"
+                  InputProps={{
+                    startAdornment: <InputAdornment position="start">
+                      <Button>
+                        <Stack
+                          direction="row"
+                          spacing={1}
+                          justifyItems="center"
+                          alignItems="center">
+                          <img width="30px" src="/logo.png" />
+                          <Typography>$CHAD</Typography>
+                          <ArrowDropDownIcon />
+                        </Stack>
+                      </Button>
+                    </InputAdornment>,
+                    endAdornment: <InputAdornment position="end">
+                      <Button size="small">
+                        max
+                      </Button>
+                    </InputAdornment>,
+                  }}
+                  fullWidth
+                  sx={{ mt: 2 }} />
                 <Typography variant="h6" sx={{ mt: 2 }}>
                   Stake amount for
                 </Typography>
+                ...
                 <Typography variant="h6" sx={{ mt: 2 }}>
                   Rate
                 </Typography>
+                ...
                 <Button sx={{ mt: 2 }} variant="contained" fullWidth>
                   <strong>STAKE</strong>
                 </Button>
