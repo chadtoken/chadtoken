@@ -54,13 +54,13 @@ export default function Album() {
                   size="small"
                   InputProps={{
                     startAdornment: <InputAdornment position="start">
-                      <Button>
+                      <Button size="small">
                         <Stack
                           direction="row"
                           spacing={1}
                           justifyItems="center"
                           alignItems="center">
-                          <img width="30px" src="/logo.png" />
+                          <img width="24px" src="/logo.png" />
                           <Typography>$CHAD</Typography>
                           <ArrowDropDownIcon />
                         </Stack>
