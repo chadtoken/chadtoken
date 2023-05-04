@@ -122,7 +122,7 @@ function ResponsiveAppBar() {
                 {page.name}
               </Button>
             ))}
-            <Button sx={{ my: 2 }} variant="outlined">
+            <Button href="/stake" sx={{ my: 2 }} variant="outlined">
               Stake
             </Button>
           </Box>
