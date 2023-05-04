@@ -29,12 +29,12 @@ const tokenList = [
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png"
   },
   {
-    "name": "Xenlon Mars",
-    "address": "0x36ff4DaE0E88113D68B1209e245B0e3Af92E9D58",
-    "symbol": "XLON",
+    "name": "Chad",
+    "address": "0x0000000000000000000000000000000000000000",
+    "symbol": "CHAD",
     "decimals": 18,
     "chainId": 1,
-    "logoURI": "https://github.com/xenlonmars/xenlonmars/blob/main/website/public/logo.png?raw=true"
+    "logoURI": "https://www.chadtoken.org/logo.png"
   },
 ];
 
@@ -46,7 +46,7 @@ const UniswapWidget = () => {
         provider={provider}
         tokenList={tokenList}
         theme={darkTheme}
-        defaultOutputTokenAddress="0x36ff4DaE0E88113D68B1209e245B0e3Af92E9D58"
+        defaultOutputTokenAddress="0x0000000000000000000000000000000000000000"
       />
     </div>
   );
