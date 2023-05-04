@@ -30,7 +30,7 @@ const Headline = styled.div`
 `;
 
 const Caption = styled.div`
-  color: #3c4043;
+  color: rgba(255, 255, 255, 0.7);
   font-weight: 300;
   line-height: 1.625;
   font-size: 16px;
@@ -98,7 +98,7 @@ export default function Album() {
             <Section>
               <Page container>
                 <CenterGrid item xs={12} md={6}>
-                  <img style={{ alignSelf: 'center' }} width="75%" alt="standing Chad" src="/originalchad.png" />
+                  <img style={{ alignSelf: 'center', transform: 'scale(-1, 1)' }} width="75%" alt="standing Chad" src="/originalchad.png" />
                 </CenterGrid>
                 <Grid item xs={12} md={6}>
                   <Paper elevation={0}>
@@ -121,31 +121,13 @@ export default function Album() {
                       Tokenmomics
                     </Headline>
                     <Caption>
-                      text here
+                      Max supply: 1 trillion. No bullshit. No taxes. No presale. 90% is sent to Uniswap for liquidity with the LP tokens burned - meaning liquidity can never be removed. 10% is kept in a multi-sig wallet for future centralized exchange listings, bridges, and liquidity pools.
                     </Caption>
                   </Paper>
                 </Grid>
                 <CenterGrid item xs={12} md={6}>
                   <img style={{ alignSelf: 'center' }} width="75%" alt="standing Chad" src="/logo.png" />
                 </CenterGrid>
-              </Page>
-            </Section>
-
-            <Section>
-              <Page container>
-                <CenterGrid item xs={12} md={6}>
-                  <img style={{ alignSelf: 'center' }} width="75%" alt="standing Chad" src="/road.png" />
-                </CenterGrid>
-                <Grid item xs={12} md={6}>
-                  <Paper elevation={0}>
-                    <Headline>
-                      Roadmap
-                    </Headline>
-                    <Caption>
-                      text here
-                    </Caption>
-                  </Paper>
-                </Grid>
               </Page>
             </Section>
 
