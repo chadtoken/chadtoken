@@ -1,4 +1,5 @@
 import * as React from 'react';
+import dynamic from 'next/dynamic'
 import IconButton from '@mui/material/IconButton';
 import CssBaseline from '@mui/material/CssBaseline';
 import Stack from '@mui/material/Stack';
@@ -7,6 +8,11 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import AppBar from '../components/AppBar';
+
+const UniswapWidget = dynamic(
+  () => import('../components/UniswapWidget'),
+  { ssr: false }
+);
 
 export default function Album() {
   return (
@@ -44,6 +50,7 @@ export default function Album() {
                 <TwitterIcon fontSize="large" />
               </IconButton>
             </Stack>
+            <UniswapWidget />
           </Container>
         </Box>
       </main>
