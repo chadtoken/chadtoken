@@ -7,6 +7,7 @@ import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
+import TextField from '@mui/material/TextField';
 import AppBar from '../components/AppBar';
 import Footer from '../components/Footer';
 
@@ -33,8 +34,8 @@ export default function Album() {
             >
               Staking
             </Typography>
-            <Typography variant="h5" align="center" color="text.secondary" paragraph>
-              Mint $YES by staking $CHAD, $PEPE, $WOJAK, or $XEN
+            <Typography variant="h6" align="center" color="text.secondary" paragraph>
+              Mint <strong style={{ color: 'white' }}>$YES</strong> by staking $CHAD, $PEPE, $WOJAK, or $XEN
             </Typography>
             <Stack
               alignItems="center"
@@ -44,6 +45,25 @@ export default function Album() {
                   <Button size="large">Deposit</Button>
                   <Button size="large">Withdraw</Button>
                 </ButtonGroup>
+                <Typography variant="h6" sx={{ mt: 2 }}>
+                  Amount to stake
+                </Typography>
+                <Typography variant="h6" sx={{ mt: 2 }}>
+                  Stake amount for
+                </Typography>
+                <Typography variant="h6" sx={{ mt: 2 }}>
+                  Rate
+                </Typography>
+                <Button sx={{ mt: 2 }} variant="contained" fullWidth>
+                  <strong>STAKE</strong>
+                </Button>
+                <Typography variant="h5" align="center" color="text.secondary" sx={{ mt: 3 }}>
+                  Earned rewards
+                </Typography>
+                <TextField size="small" fullWidth sx={{ mt: 2 }} />
+                <Button sx={{ mt: 2 }} color="success" variant="contained" fullWidth>
+                  <strong>CLAIM</strong>
+                </Button>
               </Box>
             </Stack>
             <Footer />
