@@ -2,6 +2,7 @@ import * as React from 'react';
 import dynamic from 'next/dynamic';
 import styled from 'styled-components';
 import CssBaseline from '@mui/material/CssBaseline';
+import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
@@ -119,8 +120,9 @@ export default function Album() {
                       Tokenomics
                     </Headline>
                     <Caption>
-                      Max supply: 1 trillion. No bullshit. No taxes. No presale. 90% is sent to Uniswap for liquidity with the LP tokens burned - meaning liquidity can never be removed. 10% is kept in a multi-sig wallet for future centralized exchange listings, bridges, and liquidity pools.
+                      Max supply is 1 trillion $CHAD tokens. No bullshit. No taxes. No presale. 90% is sent to Uniswap for liquidity with the LP tokens burned - meaning liquidity can never be removed. 10% is kept in a multi-sig wallet for future centralized exchange listings, bridges, and liquidity pools.
                     </Caption>
+                    <Button sx={{ mt: 1 }} size="large" variant="contained" disableElevation>Proof of LP token burn</Button>
                   </Paper>
                 </Grid>
                 <CenterGrid item xs={12} md={6}>
