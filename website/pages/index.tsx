@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
@@ -128,6 +129,56 @@ export default function Album() {
               </Page>
             </Section>
 
+            <Grid direction="column" justifyContent="center" alignItems="center" container>
+              <Grid item>
+                <Headline>
+                  Roadmap
+                </Headline>
+              </Grid>
+              <Grid item>
+                <Box sx={{ mt: 3 }} />
+                <Grid spacing={1} justifyContent="space-between" container>
+                  {[
+                    {
+                      title: "Phase 1",
+                      points: [
+                        "ayo chill"
+                      ]
+                    },
+                    {
+                      title: "Phase 2",
+                      points: [
+                        "ayo chill"
+                      ]
+                    },
+                    {
+                      title: "Phase 3",
+                      points: [
+                        "ayo chill"
+                      ]
+                    },
+                    {
+                      title: "Phase 4",
+                      points: [
+                        "ayo chill"
+                      ]
+                    }
+                  ].map((data) => (
+                    <Grid key={data.title} item>
+                      <Paper elevation={0} sx={{ p: 2, backgroundColor: 'white', borderRadius: '12px', color: 'black', width: 200 }}>
+                        <Stack>
+                          <strong>{data.title}</strong>
+                          <Box sx={{ pt: 1 }} />
+                          <Box>
+                            {data.points.map((point) => `• ${point}`)}
+                          </Box>
+                        </Stack>
+                      </Paper>
+                    </Grid>
+                  ))}
+                </Grid>
+              </Grid>
+            </Grid>
             <Footer />
           </Container>
         </Box>
