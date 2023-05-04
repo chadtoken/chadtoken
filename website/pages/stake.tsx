@@ -1,14 +1,10 @@
 import * as React from 'react';
-import IconButton from '@mui/material/IconButton';
 import CssBaseline from '@mui/material/CssBaseline';
-import Grid from '@mui/material/Grid';
-import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import TelegramIcon from '@mui/icons-material/Telegram';
 import AppBar from '../components/AppBar';
+import Footer from '../components/Footer';
 
 export default function Album() {
   return (
@@ -37,19 +33,7 @@ export default function Album() {
               By staking $CHAD, $PEPE, $WOJAK, or $XEN.
             </Typography>
             
-            <Stack
-              sx={{ pt: 4 }}
-              direction="row"
-              spacing={2}
-              justifyContent="center"
-            >
-              <IconButton size="large" target="_blank" href="https://twitter.com/ChadTokenOrg">
-                <TwitterIcon fontSize="large" />
-              </IconButton>
-              <IconButton size="large" target="_blank" href="https://t.me/chadtokenorg">
-                <TelegramIcon fontSize="large" />
-              </IconButton>
-            </Stack>
+            <Footer />
           </Container>
         </Box>
       </main>

@@ -1,17 +1,14 @@
 import * as React from 'react';
 import dynamic from 'next/dynamic';
 import styled from 'styled-components';
-import IconButton from '@mui/material/IconButton';
 import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
-import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import TelegramIcon from '@mui/icons-material/Telegram';
 import AppBar from '../components/AppBar';
+import Footer from '../components/Footer';
 
 const UniswapWidget = dynamic(
   () => import('../components/UniswapWidget'),
@@ -103,10 +100,10 @@ export default function Album() {
                 <Grid item xs={12} md={6}>
                   <Paper elevation={0}>
                     <Headline>
-                      About
+                      About $CHAD
                     </Headline>
                     <Caption>
-                      Chad is over the stupid dog meme coins. No one cares. It is time to change that and take over the meme tokens game. The internet is filled with Wojak, Pepe, and Chad memes so it is time for the light to shine on real meme tokens like $CHAD.
+                      Yes, Chad is over the stupid dog meme coins. No one cares. It is time to change that and take over the meme tokens game. The internet is filled with Wojak, Pepe, and Chad memes so it is time for the light to shine on real meme tokens like $CHAD.
                     </Caption>
                   </Paper>
                 </Grid>
@@ -118,7 +115,7 @@ export default function Album() {
                 <Grid item xs={12} md={6}>
                   <Paper elevation={0}>
                     <Headline>
-                      Tokenmomics
+                      Tokenomics
                     </Headline>
                     <Caption>
                       Max supply: 1 trillion. No bullshit. No taxes. No presale. 90% is sent to Uniswap for liquidity with the LP tokens burned - meaning liquidity can never be removed. 10% is kept in a multi-sig wallet for future centralized exchange listings, bridges, and liquidity pools.
@@ -131,19 +128,7 @@ export default function Album() {
               </Page>
             </Section>
 
-            <Stack
-              sx={{ pt: 4 }}
-              direction="row"
-              spacing={2}
-              justifyContent="center"
-            >
-              <IconButton size="large" target="_blank" href="https://twitter.com/ChadTokenOrg">
-                <TwitterIcon fontSize="large" />
-              </IconButton>
-              <IconButton size="large" target="_blank" href="https://t.me/chadtokenorg">
-                <TelegramIcon fontSize="large" />
-              </IconButton>
-            </Stack>
+            <Footer />
           </Container>
         </Box>
       </main>
