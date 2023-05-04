@@ -122,7 +122,7 @@ export default function Album() {
                     <Caption>
                       Max supply is 1 trillion $CHAD tokens. No bullshit. No taxes. No presale. 90% is sent to Uniswap for liquidity with the LP tokens burned - meaning liquidity can never be removed. 10% is kept in a multi-sig wallet for future centralized exchange listings, bridges, and liquidity pools.
                     </Caption>
-                    <Button sx={{ mt: 1 }} size="large" variant="contained" disableElevation>Proof of LP token burn</Button>
+                    <Button sx={{ mt: 3 }} size="large" variant="contained" disableElevation>Proof of LP token burn</Button>
                   </Paper>
                 </Grid>
                 <CenterGrid item xs={12} md={6}>
