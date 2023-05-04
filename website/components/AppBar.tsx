@@ -14,7 +14,6 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
 const pages = [
-  { name: "Stake", variant: 'outlined', href: "/" },
   { name: "Buy", variant: 'text', href: "#roadmap" },
   { name: "About", variant: 'text', href: "#about" },
   { name: "Tokenomics", variant: 'text', href: "#tokenomics" },
@@ -123,6 +122,9 @@ function ResponsiveAppBar() {
                 {page.name}
               </Button>
             ))}
+            <Button sx={{ my: 2 }} variant="outlined">
+              Stake
+            </Button>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>

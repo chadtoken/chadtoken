@@ -29,7 +29,7 @@ export default function Album() {
             pb: 6,
           }}
         >
-          <Container maxWidth="sm">
+          <Container maxWidth="md">
             <Typography
               component="h1"
               variant="h2"
@@ -40,13 +40,23 @@ export default function Album() {
               Yes Chad
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
-              The most easy going and winning {"man's"} man meme on the internet. Token coming soon!
+              The most easy going and winning {"man's"} man meme on the internet.
             </Typography>
             <Grid justifyContent="center" alignItems="center" container>
               <Grid item>
                 <UniswapWidget />
               </Grid>
             </Grid>
+            <Box sx={{ mt: 5, mb: 5 }}>
+              <Grid justifyContent="space-between" container>
+                <Grid item>
+                  hi
+                </Grid>
+                <Grid item>
+                  hi
+                </Grid>
+              </Grid>
+            </Box>
             <Stack
               sx={{ pt: 4 }}
               direction="row"
