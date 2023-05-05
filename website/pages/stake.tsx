@@ -8,6 +8,15 @@ import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import TextField from '@mui/material/TextField';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import Divider from '@mui/material/Divider';
+import InboxIcon from '@mui/icons-material/Inbox';
+import DraftsIcon from '@mui/icons-material/Drafts';
+import CircleIcon from '@mui/icons-material/Circle';
 import InputAdornment from '@mui/material/InputAdornment';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import AppBar from '../components/AppBar';
@@ -79,7 +88,58 @@ export default function Stake() {
                 <Typography variant="h6" sx={{ mt: 2 }}>
                   Stake amount for
                 </Typography>
-                ...
+                <List component="nav" aria-label="main mailbox folders">
+                  {[
+                    {
+                      term: "1 week",
+                      boostPercent: 20,
+                      selected: true,
+                    },
+                    {
+                      term: "1 month",
+                      boostPercent: 50
+                    },
+                    {
+                      term: "3 months",
+                      boostPercent: 200
+                    },
+                    {
+                      term: "6 months",
+                      boostPercent: 20
+                    },
+                    {
+                      term: "1 year",
+                      boostPercent: 20
+                    },
+                  ].map((data) => (
+                    <ListItem
+                      disablePadding
+                      key={0}
+                      secondaryAction={
+                        <Stack
+                          spacing={2}
+                          alignItems="center"
+                          direction="row">
+                          {data.selected && <Button disabled size="small" variant="contained">{1 + (data.boostPercent / 100)}x</Button>}
+                          <div>{data.boostPercent}%</div>
+                        </Stack>
+                      }>
+                      <ListItemButton
+                        selected={data.selected}
+                      // selected={selectedIndex === 0}
+                      // onClick={(event) => handleListItemClick(event, 0)}
+                      >
+                        <ListItemIcon>
+                          <CircleIcon sx={{
+                            fontSize: 13,
+                            color: data.selected ? '#66bb6a' : 'inherit'
+                          }} />
+                        </ListItemIcon>
+                        <ListItemText primary={data.term} />
+                      </ListItemButton>
+                    </ListItem>
+                  ))}
+                </List>
                 <Typography variant="h6" sx={{ mt: 2 }}>
                   Rate
                 </Typography>
