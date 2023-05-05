@@ -121,7 +121,7 @@ export default function Stake() {
                           alignItems="center"
                           direction="row">
                           {data.selected && <Button disabled size="small" variant="contained">{1 + (data.boostPercent / 100)}x</Button>}
-                          <div>{data.boostPercent}%</div>
+                          <div>{data.boostPercent}% boost</div>
                         </Stack>
                       }>
                       <ListItemButton
@@ -140,10 +140,6 @@ export default function Stake() {
                     </ListItem>
                   ))}
                 </List>
-                <Typography variant="h6" sx={{ mt: 2 }}>
-                  Rate
-                </Typography>
-                ...
                 <Button sx={{ mt: 2 }} variant="contained" fullWidth>
                   <strong>STAKE</strong>
                 </Button>
