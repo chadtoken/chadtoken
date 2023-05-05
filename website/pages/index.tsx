@@ -79,9 +79,10 @@ export default function Album() {
           <Container maxWidth="md">
             <Typography
               component="h1"
-              variant="h2"
+              variant="h1"
               align="center"
               color="text.primary"
+              sx={{ fontFamily: "Laki Reddy" }}
               gutterBottom
             >
               Yes Chad
