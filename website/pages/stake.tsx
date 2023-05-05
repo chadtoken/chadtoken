@@ -13,7 +13,7 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import AppBar from '../components/AppBar';
 import Footer from '../components/Footer';
 
-export default function Album() {
+export default function Stake() {
   return (
     <Box>
       <CssBaseline />
@@ -21,9 +21,11 @@ export default function Album() {
       <main>
         <Box
           sx={{
-            bgcolor: 'transparent',
             pt: 8,
             pb: 6,
+            backgroundImage: { xs: 'none', md: 'url(/yeschatballoon.svg)' },
+            backgroundSize: { xs: 'none', md: '300px' },
+            backgroundRepeat: { xs: 'none', md: 'no-repeat' }
           }}
         >
           <Container maxWidth="md">
@@ -34,7 +36,7 @@ export default function Album() {
               color="text.primary"
               gutterBottom
             >
-              Staking
+              Stake
             </Typography>
             <Typography variant="h6" align="center" color="text.secondary" paragraph>
               Mint <strong style={{ color: 'white' }}>$YES</strong> by staking $CHAD, $PEPE, $WOJAK, or $XEN
@@ -97,7 +99,7 @@ export default function Album() {
             <Footer />
           </Container>
         </Box>
-      </main>
-    </Box>
+      </main >
+    </Box >
   );
 }
