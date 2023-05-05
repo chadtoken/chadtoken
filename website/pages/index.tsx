@@ -133,7 +133,7 @@ export default function Album() {
                       Tokenomics
                     </Headline>
                     <Caption>
-                      Max supply is 1 trillion $CHAD tokens. No nonsense. No taxes. No presale. 85% is sent to Uniswap for liquidity with the LP tokens burned - meaning liquidity can never be removed. 10% is kept in a multi-sig wallet for future centralized exchange listings, bridges, and liquidity pools. 5% for founders.
+                      Max supply is 1 trillion $CHAD tokens. No nonsense. No taxes. No presale. 90% is sent to Uniswap for liquidity with the LP tokens burned - meaning liquidity can never be removed. 10% is kept in a multi-sig wallet for future centralized exchange listings, bridges, and liquidity pools.
                     </Caption>
                     <Button sx={{ mt: 3 }} size="large" variant="contained" disableElevation>Proof of LP token burn</Button>
                   </Paper>
