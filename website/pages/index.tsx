@@ -145,35 +145,42 @@ export default function Album() {
                     {
                       title: "Phase 1",
                       points: [
-                        "ayo chill"
+                        "website and social",
+                        "build community",
+                        "launch $CHAD token",
+                        "Be a Chad, get bags swole"
                       ]
                     },
                     {
                       title: "Phase 2",
                       points: [
-                        "ayo chill"
+                        "CoinGecko & CMC listing",
+                        "Contract audit",
+                        "Partnerships and contests",
+                        "Over 1000 holders"
                       ]
                     },
                     {
                       title: "Phase 3",
                       points: [
-                        "ayo chill"
-                      ]
-                    },
-                    {
-                      title: "Phase 4",
-                      points: [
-                        "ayo chill"
+                        "CEX listings",
+                        "Over 50,000 holders",
+                        "Chad merch and tools",
+                        "More Chad gains"
                       ]
                     }
                   ].map((data) => (
                     <Grid key={data.title} item>
-                      <Paper elevation={0} sx={{ p: 2, backgroundColor: 'white', borderRadius: '12px', color: 'black', width: 200 }}>
+                      <Paper elevation={0} sx={{ p: 2, backgroundColor: 'white', borderRadius: '12px', color: 'black', width: 250 }}>
                         <Stack>
                           <strong>{data.title}</strong>
                           <Box sx={{ pt: 1 }} />
                           <Box>
-                            {data.points.map((point) => `• ${point}`)}
+                            <Stack>
+                              {data.points.map((point) => <Box key={point}>
+                                {`• ${point}`}
+                              </Box>)}
+                            </Stack>
                           </Box>
                         </Stack>
                       </Paper>
