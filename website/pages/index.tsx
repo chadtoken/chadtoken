@@ -82,7 +82,7 @@ export default function Album() {
               variant="h1"
               align="center"
               color="text.primary"
-              sx={{ fontFamily: "Laki Reddy" }}
+              sx={{ fontFamily: "Rock Salt" }}
               gutterBottom
             >
               Yes Chad
@@ -172,12 +172,18 @@ export default function Album() {
                     }
                   ].map((data) => (
                     <Grid key={data.title} item>
-                      <Paper elevation={0} sx={{ p: 2, backgroundColor: 'white', borderRadius: '12px', color: 'black', width: 250 }}>
+                      <Paper elevation={0} sx={{
+                        p: 3,
+                        borderRadius: '12px',
+                        width: 260,
+                        border: '0.5px solid gray'
+                      }}>
                         <Stack>
-                          <strong>{data.title}</strong>
-                          <Box sx={{ pt: 1 }} />
-                          <Box>
-                            <Stack>
+                          <Typography variant="h6">
+                            {data.title}
+                          </Typography>
+                          <Box sx={{ pt: 2 }} >
+                            <Stack spacing={1}>
                               {data.points.map((point) => <Box key={point}>
                                 {`• ${point}`}
                               </Box>)}
