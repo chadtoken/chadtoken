@@ -107,9 +107,12 @@ export default function Album() {
                     <Headline>
                       About $CHAD
                     </Headline>
-                    <Caption>
-                      Yes, Chad is over the stupid dog meme coins. No one cares. It is time to change that and take over the meme tokens game. The internet is filled with Wojak, Pepe, and Chad memes so it is time for the light to shine on real meme tokens like $CHAD.
-                    </Caption>
+                    <Stack spacing={2}>
+                      <Caption>
+                        Yes, Chad is over the stupid dog meme coins. No one cares. It is time to change that and take over the meme tokens game. The internet is filled with Wojak, Pepe, and Chad memes so it is time for the light to shine on real meme tokens like $CHAD.
+                      </Caption>
+                      <img src="/yeschatballoon.svg" width="250rem" />
+                    </Stack>
                   </Paper>
                 </Grid>
               </Page>
