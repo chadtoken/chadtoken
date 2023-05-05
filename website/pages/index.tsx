@@ -182,11 +182,11 @@ export default function Album() {
                       ]
                     }
                   ].map((data) => (
-                    <Grid key={data.title} item>
+                    <Grid xs={12} md={4} key={data.title} item>
                       <Paper elevation={0} sx={{
                         p: 3,
                         borderRadius: '12px',
-                        width: 260,
+                        width: { md: 260 },
                         border: '0.5px solid gray'
                       }}>
                         <Stack>
