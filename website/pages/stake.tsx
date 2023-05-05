@@ -13,6 +13,9 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import MenuIcon from '@mui/icons-material/Menu';
 import Divider from '@mui/material/Divider';
 import InboxIcon from '@mui/icons-material/Inbox';
 import DraftsIcon from '@mui/icons-material/Drafts';
@@ -23,6 +26,16 @@ import AppBar from '../components/AppBar';
 import Footer from '../components/Footer';
 
 export default function Stake() {
+  const [anchorElUser, setAnchorElToken] = React.useState<null | HTMLElement>(null);
+
+  const handleOpenTokenMenu = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorElToken(event.currentTarget);
+  };
+
+  const handleCloseTokenMenu = () => {
+    setAnchorElToken(null);
+  };
+
   return (
     <Box>
       <CssBaseline />
@@ -65,7 +78,7 @@ export default function Stake() {
                   size="small"
                   InputProps={{
                     startAdornment: <InputAdornment position="start">
-                      <Button size="small">
+                      <Button onClick={handleOpenTokenMenu} size="small">
                         <Stack
                           direction="row"
                           spacing={1}
@@ -76,6 +89,48 @@ export default function Stake() {
                           <ArrowDropDownIcon />
                         </Stack>
                       </Button>
+                      <Menu
+                        sx={{ mt: '45px' }}
+                        id="menu-appbar"
+                        anchorEl={anchorElUser}
+                        anchorOrigin={{
+                          vertical: 'top',
+                          horizontal: 'left',
+                        }}
+                        keepMounted
+                        transformOrigin={{
+                          vertical: 'top',
+                          horizontal: 'left',
+                        }}
+                        open={Boolean(anchorElUser)}
+                        onClose={handleCloseTokenMenu}
+                      >
+                        {[
+                          {
+                            ticker: "PEPE",
+                            logo: "https://assets.coingecko.com/coins/images/29850/small/pepe-token.jpeg?1682922725",
+                          },
+                          {
+                            ticker: "WOJAK",
+                            logo: "https://assets.coingecko.com/coins/images/29856/small/wojak.png?1681821640",
+                          },
+                          {
+                            ticker: "XEN",
+                            logo: "https://assets.coingecko.com/coins/images/27713/small/Xen.jpeg?1665453190",
+                          }
+                        ].map((data) => (
+                          <MenuItem key={data.ticker} onClick={handleCloseTokenMenu}>
+                            <Stack
+                              direction="row"
+                              spacing={1}
+                              justifyItems="center"
+                              alignItems="center">
+                              <img width="24px" style={{ borderRadius: '25px' }} src={data.logo} />
+                              <Typography>${data.ticker}</Typography>
+                            </Stack>
+                          </MenuItem>
+                        ))}
+                      </Menu>
                     </InputAdornment>,
                     endAdornment: <InputAdornment position="end">
                       <Button size="small">
