@@ -13,7 +13,9 @@ export default function Footer() {
         direction="row"
         spacing={2}
         justifyContent="center"
+        alignItems="center"
       >
+        <img src="/pepeapproval.svg" width="25%" />
         <IconButton size="large" target="_blank" href="https://twitter.com/ChadTokenOrg">
           <TwitterIcon fontSize="large" />
         </IconButton>

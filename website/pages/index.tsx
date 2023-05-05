@@ -84,6 +84,7 @@ export default function Album() {
               color="text.primary"
               sx={{ fontFamily: "Rock Salt" }}
               gutterBottom
+              className={styles.floating}
             >
               Yes Chad
             </Typography>
