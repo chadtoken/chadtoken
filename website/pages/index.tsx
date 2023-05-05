@@ -11,6 +11,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import AppBar from '../components/AppBar';
 import Footer from '../components/Footer';
+import styles from './index.module.css';
 
 const UniswapWidget = dynamic(
   () => import('../components/UniswapWidget'),
@@ -120,13 +121,13 @@ export default function Album() {
                       Tokenomics
                     </Headline>
                     <Caption>
-                      Max supply is 1 trillion $CHAD tokens. No bullshit. No taxes. No presale. 90% is sent to Uniswap for liquidity with the LP tokens burned - meaning liquidity can never be removed. 10% is kept in a multi-sig wallet for future centralized exchange listings, bridges, and liquidity pools.
+                      Max supply is 1 trillion $CHAD tokens. No nonsense. No taxes. No presale. 90% is sent to Uniswap for liquidity with the LP tokens burned - meaning liquidity can never be removed. 10% is kept in a multi-sig wallet for future centralized exchange listings, bridges, and liquidity pools.
                     </Caption>
                     <Button sx={{ mt: 3 }} size="large" variant="contained" disableElevation>Proof of LP token burn</Button>
                   </Paper>
                 </Grid>
                 <CenterGrid item xs={12} md={6}>
-                  <img style={{ alignSelf: 'center' }} width="75%" alt="standing Chad" src="/logo.png" />
+                  <div style={{ alignSelf: 'center' }} className={styles.coin}></div>
                 </CenterGrid>
               </Page>
             </Section>
