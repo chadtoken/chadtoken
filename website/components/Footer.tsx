@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <React.Fragment>
       <Stack
-        sx={{ pt: 4 }}
+        sx={{ pt: 9 }}
         direction="row"
         spacing={2}
         justifyContent="center"

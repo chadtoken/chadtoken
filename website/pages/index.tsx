@@ -26,7 +26,7 @@ const Headline = styled.div`
   line-height: 1.18182;
   font-size: 44px;
   letter-spacing: -.5;
-  margin-bottom: 5.6;
+  margin-bottom: 5.6px;
 `;
 
 const Caption = styled.div`
@@ -34,7 +34,7 @@ const Caption = styled.div`
   font-weight: 300;
   line-height: 1.625;
   font-size: 16px;
-  margin-bottom: 5.6;
+  margin-bottom: 5.6px;
 `;
 
 const Page = styled(Grid)`
@@ -100,7 +100,14 @@ export default function Album() {
             <Section>
               <Page container>
                 <CenterGrid item xs={12} md={6}>
-                  <img style={{ alignSelf: 'center', transform: 'scale(-1, 1)' }} width="75%" alt="standing Chad" src="/originalchad.png" />
+                  <img
+                    style={{
+                      alignSelf: 'center',
+                      transform: 'scale(-1, 1)'
+                    }}
+                    width="75%"
+                    alt="standing Chad"
+                    src="/originalchad.png" />
                 </CenterGrid>
                 <Grid item xs={12} md={6}>
                   <Paper elevation={0}>
@@ -144,7 +151,7 @@ export default function Album() {
                 </Headline>
               </Grid>
               <Grid item>
-                <Box sx={{ mt: 3 }} />
+                <Box sx={{ mt: 4 }} />
                 <Grid spacing={1} justifyContent="space-between" container>
                   {[
                     {
