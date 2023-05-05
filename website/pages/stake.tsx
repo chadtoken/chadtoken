@@ -105,11 +105,11 @@ export default function Stake() {
                     },
                     {
                       term: "6 months",
-                      boostPercent: 20
+                      boostPercent: 300
                     },
                     {
                       term: "1 year",
-                      boostPercent: 20
+                      boostPercent: 500
                     },
                   ].map((data) => (
                     <ListItem
