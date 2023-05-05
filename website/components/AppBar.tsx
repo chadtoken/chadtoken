@@ -20,7 +20,7 @@ const pages = [
   { name: "Tokenomics", href: "#tokenomics" },
   { name: "Roadmap", href: "#roadmap" },
 ];
-const settings = ['Buy now', 'Twitter'];
+const settings = ['Disconnect'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -130,7 +130,7 @@ function ResponsiveAppBar() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Buy now">
+            <Tooltip title="Connect">
               <Button sx={{ display: { xs: 'none', md: 'flex' } }} variant="contained" onClick={handleOpenUserMenu}>
                 Connect
               </Button>
