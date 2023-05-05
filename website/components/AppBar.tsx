@@ -12,6 +12,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import Link from '../src/Link';
 
 const pages = [
   { name: "Buy", href: "#roadmap" },
@@ -46,18 +47,20 @@ function ResponsiveAppBar() {
         <Toolbar sx={{ mt: 2, mb: 2 }} disableGutters>
           <Grid alignItems="center" alignContent="center" justifyContent="space-between" sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} container>
             <Grid item>
-              <Grid alignItems="center" alignContent="center" container>
-                <Grid item>
-                  <Avatar sx={{ mr: 2, width: 60, height: 60 }} src="/chadcolor.png"></Avatar>
+              <Link underline="none" href="/">
+                <Grid alignItems="center" alignContent="center" container>
+                  <Grid item>
+                    <Avatar sx={{ mr: 2, width: 60, height: 60 }} src="/chadcolor.png"></Avatar>
+                  </Grid>
+                  <Grid item>
+                    <Typography variant="h6" color="inherit" noWrap sx={{
+                      fontWeight: 700,
+                    }}>
+                      Chad
+                    </Typography>
+                  </Grid>
                 </Grid>
-                <Grid item>
-                  <Typography variant="h6" color="inherit" noWrap sx={{
-                    fontWeight: 700,
-                  }}>
-                    Chad
-                  </Typography>
-                </Grid>
-              </Grid>
+              </Link>
             </Grid>
           </Grid>
 
