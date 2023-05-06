@@ -116,7 +116,7 @@ export default function Stake() {
                           },
                           {
                             ticker: "XEN",
-                            logo: "https://assets.coingecko.com/coins/images/27713/small/Xen.jpeg?1665453190",
+                            logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/22118.png",
                           }
                         ].map((data) => (
                           <MenuItem key={data.ticker} onClick={handleCloseTokenMenu}>
