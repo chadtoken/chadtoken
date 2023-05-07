@@ -26,6 +26,7 @@ import AppBar from '../components/AppBar';
 import Footer from '../components/Footer';
 
 export default function Stake() {
+  const [selectedIndex, setSelectedIndex] = React.useState(1);
   const [anchorElUser, setAnchorElToken] = React.useState<null | HTMLElement>(null);
 
   const handleOpenTokenMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -34,6 +35,13 @@ export default function Stake() {
 
   const handleCloseTokenMenu = () => {
     setAnchorElToken(null);
+  };
+
+  const handleListItemClick = (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>,
+    index: number,
+  ) => {
+    setSelectedIndex(index);
   };
 
   return (
@@ -148,7 +156,6 @@ export default function Stake() {
                     {
                       term: "1 week",
                       boostPercent: 20,
-                      selected: true,
                     },
                     {
                       term: "1 month",
@@ -166,7 +173,7 @@ export default function Stake() {
                       term: "1 year",
                       boostPercent: 500
                     },
-                  ].map((data) => (
+                  ].map((data, index) => (
                     <ListItem
                       disablePadding
                       key={0}
@@ -175,19 +182,20 @@ export default function Stake() {
                           spacing={2}
                           alignItems="center"
                           direction="row">
-                          {data.selected && <Button disabled size="small" variant="contained">{1 + (data.boostPercent / 100)}x</Button>}
+                          {index === selectedIndex && <Button disabled size="small" variant="contained">{
+                            data.boostPercent < 100 ? 1 + data.boostPercent * .01 : data.boostPercent * .01
+                          }x</Button>}
                           <div>{data.boostPercent}% boost</div>
                         </Stack>
                       }>
                       <ListItemButton
-                        selected={data.selected}
-                      // selected={selectedIndex === 0}
-                      // onClick={(event) => handleListItemClick(event, 0)}
+                        selected={index === selectedIndex}
+                        onClick={(event) => handleListItemClick(event, index)}
                       >
                         <ListItemIcon>
                           <CircleIcon sx={{
                             fontSize: 13,
-                            color: data.selected ? '#66bb6a' : 'inherit'
+                            color: index === selectedIndex ? '#66bb6a' : 'inherit'
                           }} />
                         </ListItemIcon>
                         <ListItemText primary={data.term} />
