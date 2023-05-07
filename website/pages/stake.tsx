@@ -26,7 +26,8 @@ import AppBar from '../components/AppBar';
 import Footer from '../components/Footer';
 
 export default function Stake() {
-  const [selectedIndex, setSelectedIndex] = React.useState(1);
+  const [selectedActionButton, setSelectedActionButton] = React.useState(0);
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
   const [anchorElUser, setAnchorElToken] = React.useState<null | HTMLElement>(null);
 
   const handleOpenTokenMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -43,6 +44,12 @@ export default function Stake() {
   ) => {
     setSelectedIndex(index);
   };
+
+  const handleActionButtonClick = () => {
+    setSelectedActionButton(
+      selectedActionButton === 0 ? 1 : 0
+    );
+  }
 
   return (
     <Box>
@@ -76,13 +83,20 @@ export default function Stake() {
               justifyContent="center">
               <Box sx={{ width: { xs: '100%', md: 555 } }}>
                 <ButtonGroup disableElevation disableFocusRipple disableRipple fullWidth variant="contained" aria-label="outlined primary button group">
-                  <Button size="large">Deposit</Button>
-                  <Button size="large">Withdraw</Button>
+                  <Button
+                    onClick={handleActionButtonClick}
+                    disabled={selectedActionButton === 0}
+                    size="large">Stake</Button>
+                  <Button
+                    onClick={handleActionButtonClick}
+                    disabled={selectedActionButton === 1}
+                    size="large">Unstake</Button>
                 </ButtonGroup>
                 <Typography variant="h6" sx={{ mt: 2 }}>
-                  Amount to stake
+                  Amount to {selectedActionButton === 0 ? 'stake' : 'unstake'}
                 </Typography>
                 <TextField
+                  helperText={`${selectedActionButton === 0 ? 'Amount in wallet' : 'Amount available to unstake'}: 0`}
                   size="small"
                   InputProps={{
                     startAdornment: <InputAdornment position="start">
@@ -148,10 +162,10 @@ export default function Stake() {
                   }}
                   fullWidth
                   sx={{ mt: 2 }} />
-                <Typography variant="h6" sx={{ mt: 2 }}>
+                {selectedActionButton === 0 && <Typography variant="h6" sx={{ mt: 2 }}>
                   Stake amount for
-                </Typography>
-                <List component="nav" aria-label="main mailbox folders">
+                </Typography>}
+                {selectedActionButton === 0 && <List component="nav" aria-label="main mailbox folders">
                   {[
                     {
                       term: "1 week",
@@ -202,9 +216,9 @@ export default function Stake() {
                       </ListItemButton>
                     </ListItem>
                   ))}
-                </List>
+                </List>}
                 <Button sx={{ mt: 2 }} variant="contained" fullWidth>
-                  <strong>STAKE</strong>
+                  <strong>{selectedActionButton === 0 ? 'STAKE' : 'UNSTAKE'}</strong>
                 </Button>
                 <Typography variant="h5" align="center" color="text.secondary" sx={{ mt: 3 }}>
                   Earned rewards
