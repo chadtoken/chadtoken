@@ -91,7 +91,19 @@ export default function Album() {
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
               The most easy going and winning {"man's"} man meme on the internet.
             </Typography>
-            <Grid id="buy" sx={{ mt: 4 }} justifyContent="center" alignItems="center" container>
+            <Grid id="buy" direction="column" spacing={2} sx={{ mt: 4 }} justifyContent="center" alignItems="center" container>
+              <Grid item>
+                <Button variant="outlined" size="large">
+                  <Stack
+                    direction="row"
+                    spacing={1}
+                    justifyItems="center"
+                    alignItems="center">
+                    <img width="24px" style={{ borderRadius: '25px' }} src="https://www.chadtoken.org/logo.png" />
+                    <Typography>Add $CHAD to wallet</Typography>
+                  </Stack>
+                </Button>
+              </Grid>
               <Grid item>
                 <UniswapWidget />
               </Grid>

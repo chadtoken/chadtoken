@@ -129,14 +129,22 @@ export default function Stake() {
                       >
                         {[
                           {
-                            ticker: "PEPE",
-                            logo: "https://assets.coingecko.com/coins/images/29850/small/pepe-token.jpeg?1682922725",
+                            id: 0,
+                            ticker: "CHAD",
+                            logo: "https://www.chadtoken.org/logo.png",
                           },
                           {
+                            id: 1,
                             ticker: "WOJAK",
                             logo: "https://assets.coingecko.com/coins/images/29856/small/wojak.png?1681821640",
                           },
                           {
+                            id: 2,
+                            ticker: "PEPE",
+                            logo: "https://assets.coingecko.com/coins/images/29850/small/pepe-token.jpeg?1682922725",
+                          },
+                          {
+                            id: 3,
                             ticker: "XEN",
                             logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/22118.png",
                           }
