@@ -91,7 +91,7 @@ export default function Album() {
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
               The most easy going and winning {"man's"} man meme on the internet.
             </Typography>
-            <Grid sx={{ mt: 4 }} justifyContent="center" alignItems="center" container>
+            <Grid id="buy" sx={{ mt: 4 }} justifyContent="center" alignItems="center" container>
               <Grid item>
                 <UniswapWidget />
               </Grid>
@@ -111,7 +111,7 @@ export default function Album() {
                 </CenterGrid>
                 <Grid item xs={12} md={6}>
                   <Paper elevation={0}>
-                    <Headline>
+                    <Headline id="about">
                       About $CHAD
                     </Headline>
                     <Stack spacing={2}>
@@ -129,7 +129,7 @@ export default function Album() {
               <Page container>
                 <Grid item xs={12} md={6}>
                   <Paper elevation={0}>
-                    <Headline>
+                    <Headline id="tokenomics">
                       Tokenomics
                     </Headline>
                     <Caption>
@@ -146,7 +146,7 @@ export default function Album() {
 
             <Grid direction="column" justifyContent="center" alignItems="center" container>
               <Grid item>
-                <Headline>
+                <Headline id="roadmap">
                   Roadmap
                 </Headline>
               </Grid>

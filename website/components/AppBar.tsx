@@ -15,10 +15,10 @@ import MenuItem from '@mui/material/MenuItem';
 import Link from '../src/Link';
 
 const pages = [
-  { name: "Buy", href: "#roadmap" },
-  { name: "About", href: "#about" },
-  { name: "Tokenomics", href: "#tokenomics" },
-  { name: "Roadmap", href: "#roadmap" },
+  { name: "Buy", href: "/#buy" },
+  { name: "About", href: "/#about" },
+  { name: "Tokenomics", href: "/#tokenomics" },
+  { name: "Roadmap", href: "/#roadmap" },
 ];
 const settings = ['Disconnect'];
 
@@ -93,25 +93,33 @@ function ResponsiveAppBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem href={page.href} key={page.name} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page.name}</Typography>
-                </MenuItem>
+                <Link key={page.name} underline="none" href={page.href}>
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">{page.name}</Typography>
+                  </MenuItem>
+                </Link>
               ))}
+              <Link underline="none" href="/stake">
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">Stake</Typography>
+                </MenuItem>
+              </Link>
             </Menu>
           </Box>
 
-          <Typography
-            variant="h5"
-            noWrap
+          <Box
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
-              fontWeight: 700,
             }}
           >
-            <Avatar sx={{ mr: 2, width: 60, height: 60 }} src="/chadcolor.png"></Avatar>
-          </Typography>
+            <Link
+              underline="none"
+              href="/">
+              <Avatar sx={{ mr: 2, width: 60, height: 60 }} src="/chadcolor.png"></Avatar>
+            </Link>
+          </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
