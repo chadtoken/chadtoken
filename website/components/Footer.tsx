@@ -4,6 +4,7 @@ import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import TelegramIcon from '@mui/icons-material/Telegram';
+import Icon from '@mui/material/Icon';
 
 export default function Footer() {
   return (
@@ -21,6 +22,15 @@ export default function Footer() {
         </IconButton>
         <IconButton size="large" target="_blank" href="https://t.me/chadtokenorg">
           <TelegramIcon fontSize="large" />
+        </IconButton>
+        <IconButton size="large" target="_blank" href="https://etherscan.io/token/">
+          <Icon style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }} fontSize="large">
+            <img width="80%" src="/etherscanlogo.svg" />
+          </Icon>
         </IconButton>
       </Stack>
       <Stack
