@@ -11,6 +11,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import AppBar from '../components/AppBar';
 import Footer from '../components/Footer';
+import Link from '../src/Link';
 import styles from './index.module.css';
 
 const UniswapWidget = dynamic(
@@ -128,7 +129,7 @@ export default function Album() {
                     </Headline>
                     <Stack spacing={2}>
                       <Caption>
-                        Yes, Chad is over the stupid dog meme coins. No one cares. It is time to change that and take over the meme tokens game. The internet is filled with Wojak, Pepe, and Chad memes so it is time for the light to shine on real meme tokens like $CHAD.
+                        Yes, Chad is over the stupid dog meme tokens. No one cares. It is time to change that and take over the meme tokens game. The internet is filled with Wojak, Pepe, and Chad memes so it is time for the light to shine on real meme tokens like $CHAD.
                       </Caption>
                       <img src="/yeschatballoon.svg" width="250rem" />
                     </Stack>
@@ -145,7 +146,7 @@ export default function Album() {
                       Tokenomics
                     </Headline>
                     <Caption>
-                      Max supply started at 1 trillion $CHAD tokens, then we burned 930.580 billion $CHAD for the hell of it to reach a new max supply of 69.420 billion $CHAD tokens. No nonsense. No taxes. No presale. 90% is sent to Uniswap for liquidity with the LP tokens burned - meaning liquidity can never be removed. 10% is kept in a multi-sig wallet for future centralized exchange listings, bridges, and liquidity pools.
+                      Max supply started at 1 trillion $CHAD tokens, then we burned 930.580 billion $CHAD for the hell of it to reach a new max supply of 69.420 billion $CHAD tokens. No nonsense. No taxes. No presale. 90% is sent to Uniswap for liquidity and the LP token was burned - meaning liquidity can never be removed. 10% is kept in a <Link underline="none" color="#388e3c" href="https://etherscan.io/name-lookup-search?id=chadtreasury.eth">multi-sig wallet</Link> for future centralized exchange listings, bridges, and liquidity pools.
                     </Caption>
                     <Button sx={{ mt: 3 }} size="large" variant="contained" disableElevation>Proof of LP token burn</Button>
                   </Paper>
