@@ -101,7 +101,7 @@ function ResponsiveAppBar() {
                 </Link>
               ))}
               <Link underline="none" href="/stake">
-                <MenuItem onClick={handleCloseNavMenu}>
+                <MenuItem disabled onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">Stake</Typography>
                 </MenuItem>
               </Link>
@@ -133,7 +133,7 @@ function ResponsiveAppBar() {
                 {page.name}
               </Button>
             ))}
-            <Button href="/stake" sx={{ my: 2 }} variant="outlined">
+            <Button disabled href="/stake" sx={{ my: 2 }} variant="outlined">
               Stake
             </Button>
           </Box>
