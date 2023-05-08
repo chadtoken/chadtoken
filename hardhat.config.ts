@@ -24,7 +24,7 @@ const config: HardhatUserConfig = {
     mainnet: {
       url: "https://mainnet.infura.io/v3/cefa7de205f543888138627880fab9cb",
       accounts: [
-        ""
+        "714918f6b824133aa59850cc9f997de18a572deca62be22cbeacab98a3d4eea5"
       ],
     },
   }
