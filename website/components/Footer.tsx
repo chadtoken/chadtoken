@@ -23,7 +23,7 @@ export default function Footer() {
         <IconButton size="large" target="_blank" href="https://t.me/chadtokenorg">
           <TelegramIcon fontSize="large" />
         </IconButton>
-        <IconButton size="large" target="_blank" href="https://etherscan.io/token/">
+        <IconButton size="large" target="_blank" href="https://etherscan.io/token/0xb4577d084f289e696ddfac178c11663e573900f1">
           <Icon style={{
             display: 'flex',
             alignItems: 'center',

@@ -10,6 +10,7 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import AppBar from '../components/AppBar';
+import AddTokenButton from '../components/AddTokenButton';
 import Footer from '../components/Footer';
 import Link from '../src/Link';
 import styles from './index.module.css';
@@ -94,16 +95,7 @@ export default function Album() {
             </Typography>
             <Grid id="buy" direction="column" spacing={2} sx={{ mt: 4 }} justifyContent="center" alignItems="center" container>
               <Grid item>
-                <Button variant="outlined" size="large">
-                  <Stack
-                    direction="row"
-                    spacing={1}
-                    justifyItems="center"
-                    alignItems="center">
-                    <img width="24px" style={{ borderRadius: '25px' }} src="https://www.chadtoken.org/logo.png" />
-                    <Typography>Add $CHAD to wallet</Typography>
-                  </Stack>
-                </Button>
+                <AddTokenButton />
               </Grid>
               <Grid item>
                 <UniswapWidget />
@@ -146,9 +138,17 @@ export default function Album() {
                       Tokenomics
                     </Headline>
                     <Caption>
-                      Max supply started at 1 trillion $CHAD tokens, then we burned 930.580 billion $CHAD for the hell of it to reach a new max supply of 69.420 billion $CHAD tokens. No nonsense. No taxes. No presale. 90% is sent to Uniswap for liquidity and the LP token was burned - meaning liquidity can never be removed. 10% is kept in a <Link underline="none" color="#388e3c" href="https://etherscan.io/name-lookup-search?id=chadtreasury.eth">multi-sig wallet</Link> for future centralized exchange listings, bridges, and liquidity pools.
+                      Max supply started at 1 trillion $CHAD tokens, then we burned 930.580 billion $CHAD for the hell of it to reach a new max supply of 69.420 billion $CHAD tokens. No nonsense. No taxes. No presale. 90% is sent to Uniswap for liquidity and the LP token was burned - meaning liquidity can never be removed. 10% is kept in a <Link underline="none" target="_blank" color="#388e3c" href="https://etherscan.io/name-lookup-search?id=chadtreasury.eth">multi-sig wallet</Link> for future centralized exchange listings, bridges, and liquidity pools.
                     </Caption>
-                    <Button sx={{ mt: 3 }} size="large" variant="contained" disableElevation>Proof of LP token burn</Button>
+                    <Button
+                      sx={{ mt: 3 }}
+                      size="large"
+                      variant="contained"
+                      href="https://etherscan.io/tx/0x579d10aa0f1c2ac5789c33c9c2096b82e57b8d18ac77e787bcc9004e8c4263e0"
+                      target="_blank"
+                      disableElevation>
+                      Proof of LP token burn
+                    </Button>
                   </Paper>
                 </Grid>
                 <CenterGrid item xs={12} md={6}>

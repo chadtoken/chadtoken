@@ -30,7 +30,7 @@ const tokenList = [
   },
   {
     "name": "Chad",
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0xb4577d084f289e696ddfac178c11663e573900f1",
     "symbol": "CHAD",
     "decimals": 18,
     "chainId": 1,
@@ -46,7 +46,7 @@ const UniswapWidget = () => {
         provider={provider}
         tokenList={tokenList}
         theme={darkTheme}
-        defaultOutputTokenAddress="0x0000000000000000000000000000000000000000"
+        defaultOutputTokenAddress="0xb4577d084f289e696ddfac178c11663e573900f1"
       />
     </div>
   );
