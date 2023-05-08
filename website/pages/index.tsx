@@ -10,6 +10,7 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import AppBar from '../components/AppBar';
+import ConnectButton from '../components/ConnectButton';
 import AddTokenButton from '../components/AddTokenButton';
 import Footer from '../components/Footer';
 import Link from '../src/Link';
@@ -94,6 +95,9 @@ export default function Album() {
               The most easy going and winning {"man's"} man meme on the internet.
             </Typography>
             <Grid id="buy" direction="column" spacing={2} sx={{ mt: 4 }} justifyContent="center" alignItems="center" container>
+              <Grid sx={{ display: { md: 'none ' } }} item>
+                <ConnectButton />
+              </Grid>
               <Grid item>
                 <AddTokenButton />
               </Grid>
