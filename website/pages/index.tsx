@@ -70,7 +70,7 @@ const CenterGrid = styled(Grid)`
 export default function Album() {
   return (<React.Fragment>
     <Head>
-      <title>$CHAD - Nordic Gamer meme token</title>
+      <title>CHAD - Nordic Gamer meme token</title>
     </Head>
     <Box>
       <CssBaseline />
