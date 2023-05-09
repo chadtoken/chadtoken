@@ -1,5 +1,6 @@
 import * as React from 'react';
 import dynamic from 'next/dynamic';
+import Head from 'next/head';
 import styled from 'styled-components';
 import CssBaseline from '@mui/material/CssBaseline';
 import Button from '@mui/material/Button';
@@ -67,7 +68,10 @@ const CenterGrid = styled(Grid)`
 `;
 
 export default function Album() {
-  return (
+  return (<React.Fragment>
+    <Head>
+      <title>$CHAD - Nordic Gamer meme token</title>
+    </Head>
     <Box>
       <CssBaseline />
       <AppBar />
@@ -229,5 +233,5 @@ export default function Album() {
         </Box>
       </main>
     </Box>
-  );
+  </React.Fragment>);
 }
